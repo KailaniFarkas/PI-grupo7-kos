@@ -1,7 +1,7 @@
-const registerController = {
-    register: function (req, res) {
+// const registerController = {
+   // register: function (req, res) {
         
-    }
-}
+   // }
+// }
 
-module.exports = registerController;
+// module.exports = registerController;
