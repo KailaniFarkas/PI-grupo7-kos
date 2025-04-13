@@ -28,16 +28,17 @@
 				<h2 class="products-title">Ingresar</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-                <form class="formLogin"  action="/login" method="get">
+                <form class="form-box"  action="/login" method="get">
                     <label>Email:</label>
                         <input type="email" name="usuario" required>
                 
                     <label>Contraseña:</label>
                         <input type="password" name="contrasenia" required>
                 
-                    <label>Recordarme:</label>
-                        <input type="checkbox" name="recordarme">
-                
+					<div class="recordarme-box">
+						<input type="checkbox" name="recordarme" id="recordarme">
+						<label for="recordarme">Recordarme</label>
+					</div>
                 <button type="submit">Ingresar</button>
                 </form>
 

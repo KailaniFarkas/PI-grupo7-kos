@@ -550,3 +550,58 @@ a {
   color: #0d304e;
   text-decoration: none;
 }
+
+/*====== REGISTER ======*/
+.form-box {
+  width: 50%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.form-box input {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  
+}
+
+.form-box button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #003049;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  background-color: #002438;
+}
+
+.recordarme-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.recordarme-box input[type="checkbox"],
+.recordarme-box label {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
