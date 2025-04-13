@@ -17,16 +17,20 @@
 </head>
 
 <body>
-	<!-- Header -->
+	<div class="main-wrapper">
+		<!-- Header -->
 	<%- include('./partials/header') %>
 	<!-- /Header -->
-
 	<!-- Novedades -->
+	<main class="content">
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
 				<h2 class="products-title">Ingresar</h2>
-			</div>
+
+	</div>
+	
+	
 			<!-- Show the "ultimos" products -->
                 <form class="form-box"  action="/login" method="get">
                     <label>Email:</label>
@@ -39,13 +43,17 @@
 						<input type="checkbox" name="recordarme" id="recordarme">
 						<label for="recordarme">Recordarme</label>
 					</div>
-                <button type="submit">Ingresar</button>
+                	<button type="submit">Ingresar</button>
                 </form>
+			<div>
+		<div>
+	<main>
 
 
 	<!-- footer -->
 	<%- include('./partials/footer.ejs') %>
 	<!-- /footer -->
+	<div>
 </body>
 
 </html>

@@ -277,7 +277,7 @@ hr {
 /*====== Footer ======*/
 .main-footer {
   background-color: #ffffff;
-  padding: 20px 0;
+  padding: 0% 0;
   margin-top: 0px;
 }
 
@@ -310,7 +310,7 @@ hr {
 .sub-footer p {
   margin: 0;
   color: var(--gray);
-  padding: 15px 0;
+  padding: 0% 0;
 }
 
 
@@ -606,3 +606,18 @@ a {
   line-height: 1;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
