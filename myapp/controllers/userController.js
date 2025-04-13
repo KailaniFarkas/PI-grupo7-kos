@@ -14,16 +14,17 @@ const userController = {
         for (let i = 0; i < listaUsuarios.length; i++) {
             const usuario = listaUsuarios[i];
             if (usuario.email === emailBuscado) {
-                usuarioEncontrado = usuario;
+              usuarioEncontrado = usuario;
             }
-        }
+          }
+          
 
         if (usuarioEncontrado) {
             const nombre = usuarioEncontrado.nombre;
             const ft = usuarioEncontrado.fotoPerfil;
             const mail = usuarioEncontrado.email;
 
-            return res.render('profile', { nombre, ft, mail });
+            return res.render("profile", { nombre, ft, mail });
         } else {
             return res.send('No encontramos al usuario con ese email');
         }
