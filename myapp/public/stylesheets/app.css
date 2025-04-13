@@ -1,5 +1,5 @@
 /*====== Fonts ======*/
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap');
 
 
 /*====== Variables ======*/
@@ -10,9 +10,14 @@
   --gray: #666666;
   --light-gray: #ebebeb;
   --green: #39b54a;
-  --base-font-family: 'Roboto', sans-serif
+  --base-font-family:  "National Park", sans-serif;
 }
 
+/* ===== ICONO DEL NAVEGADOR ======*/
+.icon-circular {
+  background-size: cover;
+  radius: 50%;
+}
 
 /*====== Basics ======*/
 * {
@@ -171,7 +176,10 @@ hr {
 .products-title {
   font-size: 2.4em;
   font-weight: 400;
-  color: var(--gray);
+  color: #689ab6;
+  font-family: "Playwrite CU", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .product-box {
@@ -204,6 +212,7 @@ hr {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  font-size: 5pt;
   /* font-size: ;*/
 }
 
