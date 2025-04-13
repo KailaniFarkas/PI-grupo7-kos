@@ -1,1 +1,0 @@
-const sesion = require('../')
