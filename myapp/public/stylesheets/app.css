@@ -278,7 +278,7 @@ hr {
 .main-footer {
   background-color: #ffffff;
   padding: 20px 0;
-  margin-top: 80px;
+  margin-top: 0px;
 }
 
 .footer-data {
@@ -605,3 +605,4 @@ a {
   padding: 0;
   line-height: 1;
 }
+
