@@ -262,6 +262,11 @@ const listaLibros = {
           fotoPerfil: "valentina.png"
         },
         {
+          usuario: "Leo Messi",
+          texto: "Lo terminé justo antes de un partido… fuerte, pero muy bueno.",
+          fotoPerfil: "leo.png"
+        },
+        {
           usuario: "Claudia Bolivar",
           texto: "Un retrato muy humano de la injusticia y el racismo. Scout es inolvidable.",
           fotoPerfil: "claudia.png"
@@ -281,6 +286,11 @@ const listaLibros = {
       annio: 2003,
       genero: "Thriller",
       comentarios: [
+        {
+          usuario: "Leo Messi",
+          texto: "Me enganché mal, lo leí todo en la concentración. Después ya tenía que ir a entrenar.",
+          fotoPerfil: "leo.png"
+        },
         {
           usuario: "Diego Torres",
           texto: "Adictivo y lleno de giros. No podía dejar de leer.",
@@ -309,6 +319,11 @@ const listaLibros = {
           usuario: "Esteban Echeverría",
           texto: "La resolución me voló la cabeza. De los mejores finales del género.",
           fotoPerfil: "esteban.png"
+        },
+        {
+          usuario: "Leo Messi",
+          texto: "Lo leí en el avión. Estaba bueno… pero no sé, me dormí en el medio.",
+          fotoPerfil: "leo.png"
         }
       ]      
     },
@@ -324,6 +339,11 @@ const listaLibros = {
           usuario: "Esteban Echeverría",
           texto: "Perturbador pero literariamente impresionante. Nabokov escribe como pocos.",
           fotoPerfil: "esteban.png"
+        },
+        {
+          usuario: "Leo Messi",
+          texto: "No sé si es para mí este libro, pero bueno, lo intenté.",
+          fotoPerfil: "leo.png"
         },
         {
           usuario: "Clara Galles",
@@ -343,6 +363,11 @@ const listaLibros = {
           usuario: "María Silva",
           texto: "Una crítica elegante al sueño americano. La ambientación es preciosa.",
           fotoPerfil: "maria.png"
+        },
+        {
+          usuario: "Leo Messi",
+          texto: "Triste el final, la verdad… igual me tengo que ir al entrenamiento.",
+          fotoPerfil: "leo.png"
         },
         {
           usuario: "Gonzalo Vega",
@@ -367,6 +392,11 @@ const listaLibros = {
           usuario: "Santiago Moyano",
           texto: "Me atrapó la transformación de Pip y la atmósfera sombría del relato.",
           fotoPerfil: "santiago.png"
+        },
+        {
+          usuario: "Leo Messi",
+          texto: "Me lo recomendaron, me costó empezarlo… después me re metí.",
+          fotoPerfil: "leo.png"
         }
       ]      
     },
@@ -378,6 +408,11 @@ const listaLibros = {
       annio: 1862,
       genero: "Novela histórica",
       comentarios: [
+        {
+          usuario: "Leo Messi",
+          texto: "Es largo, eh… lo iba leyendo entre partidos. Valjean la pelea como loco.",
+          fotoPerfil: "leo.png"
+        },
         {
           usuario: "Gonzalo Vega",
           texto: "Una epopeya de la redención y la justicia. Jean Valjean es inolvidable.",
@@ -407,6 +442,11 @@ const listaLibros = {
           usuario: "Micaela Luna",
           texto: "Camus me hizo sentir incómoda, y eso fue lo mejor del libro.",
           fotoPerfil: "micaela.png"
+        },
+        {
+          usuario: "Leo Messi",
+          texto: "No sé qué decir… raro. Pero algo tiene.",
+          fotoPerfil: "leo.png"
         }
       ]      
     },
@@ -447,6 +487,11 @@ const listaLibros = {
           usuario: "Micaela Luna",
           texto: "Una historia conmovedora sobre el rechazo y la humanidad. Me sorprendió muchísimo.",
           fotoPerfil: "micaela.png"
+        },
+        {
+          usuario: "Leo Messi",
+          texto: "Me dio cosa el monstruo, pobre...",
+          fotoPerfil: "leo.png"
         },
         {
           usuario: "Juan Pérez",
