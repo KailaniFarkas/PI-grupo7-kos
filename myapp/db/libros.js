@@ -31,6 +31,11 @@ const listaLibros = {
           usuario: "Julia Herrera",
           texto: "Una narrativa hipnótica. El tiempo cíclico, los personajes entrañables y el estilo poético lo hacen único.",
           fotoPerfil: "julia.png"
+        },
+        {
+          usuario: "Leo Messi",
+          texto: "Como dije antes, Macondo está complicado pero bueno… hay que seguir leyendo.",
+          fotoPerfil: "leo.png"
         }
       ]
     },
@@ -45,6 +50,11 @@ const listaLibros = {
           usuario: "Juan Pérez",
           texto: "Me dejó pensando días. Inquietante y visionario.",
           fotoPerfil: "juan.png"
+        },
+        {
+          usuario: "Leo Messi",
+          texto: "Mirá que yo no hablo mucho, pero esto… esto es fuerte.",
+          fotoPerfil: "leo.png"
         },
         {
           usuario: "Valeria Mazza",
@@ -69,6 +79,11 @@ const listaLibros = {
           usuario: "Claudia Bolivar",
           texto: "Elizabeth Bennet es una heroína inolvidable. Romántico, crítico y con una prosa deliciosa.",
           fotoPerfil: "claudia.png"
+        },
+        {
+          usuario: "Leo Messi",
+          texto: "Nada, el amor siempre es difícil, como en los clásicos partidos.",
+          fotoPerfil: "leo.png"
         }
       ]
     },
@@ -84,6 +99,11 @@ const listaLibros = {
           texto: "Desconcertante e inquietante. Kafka transforma lo absurdo en cotidiano de manera aterradora.",
           fotoPerfil: "emilia.png"
         },
+        {
+          usuario: "Leo Messi",
+          texto: "Me desperté siendo bicho, pero seguimos con humildad y trabajo.",
+          fotoPerfil: "leo.png"
+        },        
         {
           usuario: "Bruno Marte",
           texto: "Una obra maestra del absurdo. Te hace cuestionar todo. A pesar de su brevedad, es una lectura densa y profunda.",
@@ -103,6 +123,11 @@ const listaLibros = {
           texto: "Denso pero valioso. Una exploración profunda del alma humana.",
           fotoPerfil: "sofia.png"
         },
+        {
+          usuario: "Leo Messi",
+          texto: "No me gusta perder… pero esto es perder contra uno mismo.",
+          fotoPerfil: "leo.png"
+        },        
         {
           usuario: "Esteban Echeverría",
           texto: "Raskólnikov es uno de los personajes más complejos que he leído. La lucha entre el bien y el mal está muy bien desarrollada.",
@@ -126,7 +151,13 @@ const listaLibros = {
           usuario: "Gonzalo Vega",
           texto: "Leerlo fue un reto, pero también una aventura literaria inigualable. Cortázar juega con la forma, el orden y el lenguaje.",
           fotoPerfil: "gonzalo.png"
+        },
+        {
+          usuario: "Leo Messi",
+          texto: "Lo empecé por el capítulo 73 como me dijeron, después fui viendo.",
+          fotoPerfil: "leo.png"
         }
+        
       ]
     },
     {
@@ -141,6 +172,11 @@ const listaLibros = {
           texto: "Un clásico poderoso. Jane es un personaje fuerte y determinado.",
           fotoPerfil: "natalia.png"
         },
+        {
+          usuario: "Leo Messi",
+          texto: "No entendi. No speak english.",
+          fotoPerfil: "leo.png"
+        },        
         {
           usuario: "Agustina Prieto",
           texto: "Atmosférico, emotivo y con un mensaje feminista adelantado a su tiempo. Me atrapó desde el inicio.",
@@ -159,7 +195,13 @@ const listaLibros = {
           usuario: "Santiago Moyano",
           texto: "Oscuro y brillante. Una meditación sobre la belleza, el narcisismo y la corrupción del alma.",
           fotoPerfil: "santiago.png"
+        },
+        {
+          usuario: "Leo Messi",
+          texto: "Si el retrato envejece por vos, es como tener un doble en la cancha.",
+          fotoPerfil: "leo.png"
         }
+        
       ]
     },
     {
@@ -190,6 +232,11 @@ const listaLibros = {
       genero: "Ficción poscolonial / Reescritura literaria",
 
       comentarios: [
+        {
+          usuario: "Leo Messi",
+          texto: "Me gustó. Como dije recién, siempre hay otra historia detrás.",
+          fotoPerfil: "leo.png"
+        },        
         {
           usuario: "Lucía Fernández",
           texto: "Una relectura feminista muy potente de Jane Eyre. Me encantó ver la otra perspectiva.",
