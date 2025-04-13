@@ -339,9 +339,10 @@ hr {
 }
 
 .product-detail-description {
-  padding: 15px 15px 15px 40px;
+  padding: 15px 15px 15px 110px;
   font-size: 1.8em;
   line-height: 1.5;
+  
 }
 
 .product-detail-price {

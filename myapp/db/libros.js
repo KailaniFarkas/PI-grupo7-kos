@@ -95,7 +95,7 @@ const listaLibros = {
       genero: "Ficción existencial / Absurdo",
       comentarios: [
         {
-          usuario: "Emilia Mernes",
+          usuario: "Emilia Viernes",
           texto: "Desconcertante e inquietante. Kafka transforma lo absurdo en cotidiano de manera aterradora.",
           fotoPerfil: "emilia.png"
         },

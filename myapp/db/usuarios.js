@@ -93,8 +93,8 @@ const listaUsuarios = {
       // Famosos
       {
         id: 11,
-        nombre: "Emilia Mernes",
-        email: "emilia.mernes@gmail.com",
+        nombre: "Emilia Viernes",
+        email: "emilia.viernes@gmail.com",
         contrasenia: "emiliacantante",
         dni: "37222333",
         fechaNacimiento: "29-10-1996",
