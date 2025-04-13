@@ -40,7 +40,27 @@
 					</a>
 				</div>
 			</div>
-	
+			<form class="register" method="get">
+				<label for="email">Email:</label>
+				<input id="email" name="email" type="email" required />
+			  
+				<label for="usuario">Usuario:</label>
+				<input id="usuario" name="usuario" type="text" required />
+			  
+				<label for="password">Contraseña:</label>
+				<input id="password" name="password" type="password" required />
+			  
+				<label for="fecha_nacimiento">Fecha de nacimiento:</label>
+				<input id="fecha_nacimiento" name="fecha_nacimiento" type="date" required />
+			  
+				<label for="documento">Nº de documento:</label>
+				<input id="documento" name="documento" type="number" required />
+			  
+				<label for="foto_perfil">Foto de perfil (URL):</label>
+				<input id="foto_perfil" name="foto_perfil" type="text" /> <!-- NO SE COMO IRIA LA FOTO DE PERFIL--> 
+			  
+				<button type="submit">Registrarse</button>
+			  </form>
 			<button class="btn-toggle-navbar">
 				<i class="fas fa-bars"></i>
 			</button>
