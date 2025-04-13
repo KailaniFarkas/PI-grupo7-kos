@@ -526,7 +526,7 @@ textarea.form-input {
 
   .left-navbar a:hover,
   .right-navbar a:hover {
-    color: var(--light-blue);
+    color: #f8fafc;
   }
 
   .left-navbar li {
@@ -545,4 +545,9 @@ textarea.form-input {
     width: 95%;
     margin: auto;
   }
+}
+
+a {
+  color: #0d304e;
+  text-decoration: none;
 }
