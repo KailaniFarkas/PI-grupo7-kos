@@ -27,7 +27,7 @@ const userController = {
 
             return res.render("profile", { nombre, ft, mail });
         } else {
-            return res.send('No encontramos al usuario con ese email');
+            return res.send('No hay ningun usuario con ese email');
         }
     },
 
