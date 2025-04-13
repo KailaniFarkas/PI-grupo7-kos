@@ -114,6 +114,38 @@ const listaLibros = {
           autor: "Charles Dickens",
           annio: 1861,
           genero: "Novela de formación / Realismo"
+        },
+
+        {
+          id: 17,
+          titulo: "Los miserables",
+          autor: "Victor Hugo",
+          annio: 1862,
+          genero: "Novela histórica"
+        },
+
+        {
+          id: 18,
+          titulo: "El extranjero",
+          autor: "Albert Camus",
+          annio: 1942,
+          genero: "Existencialismo"
+        },
+
+        {
+          id: 19,
+          titulo: "Romeo y Julieta",
+          autor: "William Shakespeare",
+          annio: 1597,
+          genero: "Tragedia romántica"
+        },
+
+        {
+          id: 20,
+          titulo: "Frankenstein",
+          autor: "Mary Shelley",
+          annio: 1818,
+          genero: "Ciencia ficción gótica"
         }
 ]
 
