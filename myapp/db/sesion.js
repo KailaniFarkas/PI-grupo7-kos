@@ -1,7 +1,6 @@
 const sesion = {
     nombre: null,
     logeado: false
-
 };
 
 function setLogeado(login) {
