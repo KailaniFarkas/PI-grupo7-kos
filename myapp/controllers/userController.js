@@ -2,6 +2,7 @@ const db = require('../db/usuarios');
 
 const userController = {
     login: function (req, res) {
+        //  renderiza nomas
         return res.render('login');
     },
 
