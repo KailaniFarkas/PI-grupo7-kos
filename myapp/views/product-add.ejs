@@ -26,24 +26,20 @@
 			<div class="col-12">
 				<h2 class="products-title">Agregar productos</h2>
 			</div>
-			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> 
-				<!--FORMULARIO DE AGREGAR PRODUCTO-->
+			<form class="form-box" method="get" action="/product/add">
+				<label for="imagen">Imagen del producto:</label>
+				<input id="imagen" name="imagen" type="file" accept="image/*">
 
-				<form method="get" action="/product/add"> 
-			
-   				<label for="imagen">Imagen del producto:</label>
-    			<input id="imagen" name="imagen" type="file" accept="image/*" /> 
-  
-    			<label for="nombre">Nombre del producto:</label>
-   	 			<input id="nombre" name="nombre" type="text" required />
-  
-    			<label for="descripcion">Descripción:</label>
-    			<input id="descripcion" name="descripcion" type="text" required />
-  
-    			<button type="submit">Agregar producto</button>
-  			</form>
-			</h2>
+				<label for="nombre">Nombre del producto:</label>
+				<input id="nombre" name="nombre" type="text" required>
+
+				<label for="descripcion">Descripción:</label>
+				<input id="descripcion" name="descripcion" type="text" required>
+
+				<button type="submit">Agregar producto</button>
+			</form>
+		</div>
+	</div>
 
 
 	<!-- footer -->

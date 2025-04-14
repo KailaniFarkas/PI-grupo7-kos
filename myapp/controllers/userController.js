@@ -1,4 +1,3 @@
-/*============== HAY QUE MODIFICAR ESTO ========================*/
 const db = require('../db/usuarios');
 
 const userController = {
@@ -39,6 +38,3 @@ const userController = {
 
 
 module.exports = userController;
-
-
-
