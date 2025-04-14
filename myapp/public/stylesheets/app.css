@@ -622,3 +622,7 @@ html, body {
 .content {
   flex: 1;
 }
+
+.fas, .fa-user{
+  margin-left: 10px;
+}

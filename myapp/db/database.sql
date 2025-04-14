@@ -1,5 +1,5 @@
-CREATE SCHEMA database;  
-USE database;
+CREATE SCHEMA databasepi;  
+USE databasepi;
 
 
 CREATE TABLE usuarios (
@@ -12,16 +12,16 @@ CREATE TABLE usuarios (
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deletedAt TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
-    id_usuario INT UNSIGNED,
+    id_usuario INT UNSIGNED
    
 );
 
 INSERT INTO usuarios (email, contrasena, fecha, dni, perfil_foto, id_usuario) VALUES  
-    ('juanperez@gmail.com', 'clave123', '15-04-1990', 30123456, 'juan.jpg', 1),
-    ('anagomez@gmail.com', 'pass456', '22-11-1988', 31234567, 'ana.png', 2),
-    ('carlosdiaz@gmail.com', '123carlos', '09-06-1995', 28765432, 'carlos.jpg', 3),
-    ('luciaf@gmail.com', 'lucia2023', '01-03-1992', 29543210, 'lucia.jpeg', 4),
-    ('martin.lopez@gmail.com', 'ml1234', '12-08-1985', 30345678, 'martin.png', 5);
+    ('juanperez@gmail.com', 'clave123', '1990-04-15', 30123456, 'juan.jpg', 1),
+    ('anagomez@gmail.com', 'pass456', '1988-11-22', 31234567, 'ana.png', 2),
+    ('carlosdiaz@gmail.com', '123carlos', '1995-06-09', 28765432, 'carlos.jpg', 3),
+    ('luciaf@gmail.com', 'lucia2023', '1992-03-01', 29543210, 'lucia.jpeg', 4),
+    ('martin.lopez@gmail.com', 'ml1234', '1985-08-12', 30345678, 'martin.png', 5);
 
 CREATE TABLE productos (
     id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
@@ -35,7 +35,7 @@ CREATE TABLE productos (
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
 
-INSERT INTO productos (imagen_archivo, nombre_producto, descripcion, usuario_id) VALUES --para insertar 10 posteos 
+INSERT INTO productos (imagen_archivo, nombre_producto, descripcion, usuario_id) VALUES 
     ('1948.png', '1948', 'Narrativa ágil con personajes inolvidables', 1),
     ('asesinato en el orient express.png', 'Asesinato en el orient express', 'Una historia atrapante que mezcla misterio y romance', 3),
     ('cien años de soledad.png', 'Cien años de soledad', 'Ideal para quienes buscan reflexión y crecimiento personal', 4),
@@ -59,8 +59,40 @@ CREATE TABLE comentarios (
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
 );
 
-INSERT INTO comentarios (texto_comentario, id_post, id_usuario) VALUES --para insertar 3 comentarios por cada post
---tengo que hacer 3 comentarios para cada libro que hay (los 20 libros)?
+INSERT INTO comentarios (texto_comentario, id_post, id_usuario) VALUES
+('Muy buena historia, atrapante', 1, 2),
+('Muy bien escrito', 1, 3),
+('Es mi favorito de momento', 1, 4),
+('Un clasico imperdible', 2, 1),
+('Muy intrigante', 2, 5),
+('Muy bueno mantenerse entretenido', 2, 4),
+('Atrapante hasta el final', 3, 2),
+('Narrativa poetica y atrapante', 3, 3),
+('Lectura dificil', 3, 1),
+('Lectura muy complicada', 4, 5),
+('Libro para cualquier tipo de edad', 4, 3),
+('Te hace quedarte pensando todo el tiempo en el libro', 4, 2),
+('Historia para todo tipo de edades', 5, 1),
+('Hay que tener un buen ritmo para poder seguirlo', 5, 4),
+('Lo termine en menos de una tarde, encantador', 5, 5),
+('Libro muy corto, no me gusto', 6, 2),
+('Palabras muy complicadas para una primera lectura', 6, 3),
+('Un estilo muy especial para leer', 6, 1),
+('Atrapante hasta el final', 7, 4),
+('Una portada impactante', 7, 2),
+('Personajes muy interesantes', 7, 5),
+('Muy divertido', 8, 1),
+('La ciencia ficcion de este libro es muy atrapante', 8, 3),
+('Para leer a cualquier tipo de edad', 8, 4),
+('Emocionante trama', 9, 5),
+('Presencia de personajes impactantes', 9, 2),
+('Me gusto mucho', 9, 3),
+('Clasico imperdible', 10, 1),
+('Hermoso y muy bueno para leer con niños', 10, 4),
+('Lo lei para el colegio y no me arrepiento', 10, 5);
+
+
+
 
 
 

@@ -4,20 +4,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link width="" rel="shortcut icon" href="/images/logo-mercado-libro.png" />
-	<link rel="icon" href="/images/icon.png" class="icon-circular" type="image/png">
-	<link rel="icon" href="/images/icon.png" class="icon-circular" type="image/png">
-
+	<link width="" rel="shortcut icon" href="/images/logo-mercado-libro.jpg" />
+	
 	<title> Mercado Libro Argentina</title>
 			<!-- Font Awesome Stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-	<link rel="stylesheet" href="/stylesheets/app.css">
-	<link rel="stylesheet" href="/stylesheets/bootstrap-grid.min.css">
+	<!-- Bootstrap Grid Stylesheet -->
+	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+	<!-- Own Stylesheet -->
+	<link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
 	<!-- Header -->
 	<%- include('./partials/headerLogueado.ejs') %>
-
 	<!-- /Header -->
 
 	<!-- Datos del usuario -->
@@ -28,9 +27,9 @@
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title">><%= listaUsuarios.nombre %>  
-						<a href="./profile.ejs">
-							<i class="fas fa-cog"></i>
+					<h1 class="main-title"><%= usuario.nombre %>
+						<a href="profile-edit.html">
+							<i class="fas fa-cog"><%=usuario.email%></i>
 						</a>
 					</h1>
 					<a class="btn mt-3 ml-4" href="">SEGUIR</a>
@@ -56,7 +55,7 @@
 			<!-- Show mis productos -->
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="product.ejs">
+					<a href="product.html">
 						<figure class="product-box_image">
 							<img src="images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -132,7 +131,8 @@
 				<section class="product-box">
 					<a href="product.html">
 						<figure class="product-box_image">
-							<img src="images/products/default-image.png" alt="cafetera moulinex">
+							<img src="images/products/<%=usuario.nombre%>.png" alt="cafetera moulinex">
+							<!-- esto esta bien? -->
 						</figure>
 						<article class="product-box_data">
 							<h2>Nombre del producto</h2>

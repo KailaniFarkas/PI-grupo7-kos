@@ -1,4 +1,13 @@
-const listaLibros = {
+const db = {
+  usuario:  {
+    id: 1,
+    nombre: "Juan Pérez",
+    email: "juanperez@gmail.com",
+    contrasenia: "clave123",
+    dni: "30123456",
+    fechaNacimiento: "15-04-1990",
+    fotoPerfil: "juan.png"
+  },
   lista: [
     {
       id: 1,
@@ -503,4 +512,4 @@ const listaLibros = {
   ]
 };
 
-module.exports = listaLibros;
+module.exports = db;

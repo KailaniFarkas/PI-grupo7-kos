@@ -1,9 +1,11 @@
-const listaLibros = require("../db/libros");
+const db = require("../db/db");
 
 const indexController = {
     index: function(req, res){
         res.render("index", {
-            listado: listaLibros.lista
+            listado: db.lista,
+            session: true, // false para que mueste el deslogueado
+            usuario : db.usuario
         })
     }
 };
