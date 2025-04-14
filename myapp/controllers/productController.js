@@ -16,6 +16,10 @@ const db = require("../db/db");
     },
     busqueda:  function (req, res) {
         return res.render('search-results');
+    },
+    agregar: function (req, res) {
+        return res.render('add');
+        
     }
  }
 
