@@ -1,5 +1,5 @@
-/*============== HAY QUE MODIFICAR ESTO ========================*/
-const db = require('../db/usuarios');
+
+const db = require('../db/db');
 
 const userController = {
     login: function (req, res) {
@@ -8,32 +8,22 @@ const userController = {
     },
 
     perfil: function (req, res) {
-        const emailBuscado = req.params.email;
-        const listaUsuarios = db.usuarios;
-
-        let usuarioEncontrado = null;
-
-        for (let i = 0; i < listaUsuarios.length; i++) {
-            const usuario = listaUsuarios[i];
-            if (usuario.email === emailBuscado) {
-              usuarioEncontrado = usuario;
-            }
-          }
-          
-
-        if (usuarioEncontrado) {
-            const nombre = usuarioEncontrado.nombre;
-            const ft = usuarioEncontrado.fotoPerfil;
-            const mail = usuarioEncontrado.email;
-
-            return res.render("profile", { nombre, ft, mail });
-        } else {
-            return res.send('No hay ningun usuario con ese email');
-        }
+        // return res.send(db.lista)
+            return res.render("profile", {listado: db.lista,usuario: db.usuario, nombre:db.usuario, ft:db.usuario.fotoPerfil, mail:db.usuario.email });
+        //mismo for de index con 3 productos
     },
 
     register: function (req, res) {
         return res.render('register');
+    },
+
+    index: function(req, res){
+        
+        return res.render("index", {
+            listado: db.lista,
+            session: true, // false para que mueste el deslogueado
+            usuario : db.usuario
+        })
     }
 };
 
