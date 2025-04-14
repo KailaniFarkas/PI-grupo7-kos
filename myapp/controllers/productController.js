@@ -13,6 +13,9 @@ const db = require("../db/db");
             }
         }
 
+    },
+    busqueda:  function (req, res) {
+        return res.render('search-results');
     }
  }
 
