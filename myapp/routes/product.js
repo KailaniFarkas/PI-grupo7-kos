@@ -9,8 +9,6 @@ router.get('/id/:id', productController.index);
 router.get('/search', productController.busqueda);
 
 
-// product/add
-router.get('/add', productController.agregar);
-
+router.get('/add', productController.agregar); // product/add
 
 module.exports = router;

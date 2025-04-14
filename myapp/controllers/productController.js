@@ -18,10 +18,8 @@ const db = require("../db/db");
         return res.render('search-results');
     },
     agregar: function (req, res) {
-        return res.render('add');
-        
+        return res.render('product-add',{usuario:db.usuario}) // llamando a la vista
     }
- }
-
+ };
 
  module.exports = productController;

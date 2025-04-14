@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 const db = require('../db/db');
+=======
+const db = require('../db/usuarios');
+>>>>>>> refs/remotes/origin/main
 
 const userController = {
     login: function (req, res) {
@@ -29,6 +33,3 @@ const userController = {
 
 
 module.exports = userController;
-
-
-
