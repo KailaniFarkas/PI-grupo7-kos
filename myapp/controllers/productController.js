@@ -1,14 +1,14 @@
  // product/id/:id
-const listaLibros = require("../db/libros");
+const db = require("../db/db");
 
  const productController = {
     index: function(req, res){
         const id = req.params.id;
 
-        for(let i = 0; i < listaLibros.lista.length; i++) {
-            if(listaLibros.lista[i].id == id) {
+        for(let i = 0; i < db.lista.length; i++) {
+            if(db.lista[i].id == id) {
                 res.render("product", {
-                    libro: listaLibros.lista[i]
+                    libro: db.lista[i]
                 })
             }
         }

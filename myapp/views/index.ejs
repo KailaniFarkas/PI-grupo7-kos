@@ -16,9 +16,13 @@
 	
 </head>
 <body>
-	<!-- Header -->
-	<%- include('./partials/header.ejs') %>
-	<!-- /Header -->
+	
+	<% if (session) { %>
+	 		<%- include('./partials/headerLogueado.ejs') %>
+	<% } else { %>
+		 <%- include('./partials/header.ejs') %>
+
+	<% } %>
 	
 	<!-- Banner -->
 	<div class="banner"></div>

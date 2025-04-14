@@ -3,8 +3,8 @@ const listaUsuarios = {
       {
         id: 1,
         nombre: "Juan Pérez",
-        email: "juanperez@gmail.com",
-        contrasenia: "clave123",
+        email: "juanperez@gmail.clave123com",
+        contrasenia: "",
         dni: "30123456",
         fechaNacimiento: "15-04-1990",
         fotoPerfil: "juan.png"
