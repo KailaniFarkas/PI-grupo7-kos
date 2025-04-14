@@ -1,6 +1,5 @@
 
-const searchResultsController ={
-   
+const searchResultsController ={  
 
 }
 
