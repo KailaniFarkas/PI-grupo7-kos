@@ -1,22 +1,22 @@
-CREATE SCHEMA registro_usuarios; --creamos la base de datos 
-USE registro_usuarios;
+CREATE SCHEMA database;  
+USE database;
 
 
 CREATE TABLE usuarios (
     id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    email VARCHAR(100) NOT NULL UNIQUE, --no puede haber dos usuarios con el mismo email
+    email VARCHAR(100) NOT NULL UNIQUE, 
     contrasena VARCHAR(100) NOT NULL,
     fecha DATE NOT NULL,
-    dni INT UNSIGNED NOT NULL UNIQUE, --no puede haber dos usuarios con el mismo dni
+    dni INT UNSIGNED NOT NULL UNIQUE, 
     perfil_foto TEXT,
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deletedAt TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
-    id_rol INT UNSIGNED,
-    FOREIGN KEY (id_rol) REFERENCES roles(id)
+    id_usuario INT UNSIGNED,
+   
 );
 
-INSERT INTO usuarios (email, contrasena, fecha, dni, perfil_foto, id_rol) VALUES --para insertar al menos 5 usuarios 
+INSERT INTO usuarios (email, contrasena, fecha, dni, perfil_foto, id_usuario) VALUES  
     ('juanperez@gmail.com', 'clave123', '15-04-1990', 30123456, 'juan.jpg', 1),
     ('anagomez@gmail.com', 'pass456', '22-11-1988', 31234567, 'ana.png', 2),
     ('carlosdiaz@gmail.com', '123carlos', '09-06-1995', 28765432, 'carlos.jpg', 3),
@@ -45,7 +45,7 @@ INSERT INTO productos (imagen_archivo, nombre_producto, descripcion, usuario_id)
     ('el relato de dorian gray.png', 'El relato de dorian gray', 'Perfecto para los fanáticos del thriller político', 1),
     ('emma.png', 'Emma', 'Una guía práctica para mejorar tu día a día', 3),
     ('jane eyre.png', 'Jane Eyre', 'Humor inteligente con crítica social', 4),
-    ('romeo y julieta.png', 'Romeo y Julieta', 'Un clasico de la literatura infantil', 5)
+    ('romeo y julieta.png', 'Romeo y Julieta', 'Un clasico de la literatura infantil', 5);
 
 CREATE TABLE comentarios (
     id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
