@@ -1,7 +1,4 @@
-
 const db = require('../db/db');
-
-
 
 const userController = {
     login: function (req, res) {
@@ -26,6 +23,9 @@ const userController = {
             session: true, // false para que mueste el deslogueado
             usuario : db.usuario
         })
+    },
+    perfil: function (req, res) {
+        return res.render("profile", { listado: db.lista, usuario: db.usuario });
     }
 };
 
