@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../public/stylesheets/app.css">
+	<link rel="stylesheet" href="../public/stylesheets/bootstrap-grid.min.css">
+	<link rel="icon" href="/images/icon.png" class="icon-circular" type="image/png">
+
+	<title> Ingresá! </title>
+	<!-- Font Awesome Stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" href="/stylesheets/app.css">
+	<link rel="stylesheet" href="/stylesheets/bootstrap-grid.min.css">
+</head>
+
+<body>
+	<div class="main-wrapper">
+		<!-- Header -->
+	<%- include('./partials/header') %>
+	<!-- /Header -->
+	<!-- Novedades -->
+	<main class="content">
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Ingresar</h2>
+			</div>
+			<!-- Show the "ultimos" products -->
+                <form class="form-box"  action="./loginProcess" method="post">
+                    <label>Email:</label>
+                        <input type="email" name="usuario" required>
+                
+                    <label>Contraseña:</label>
+                        <input type="password" name="contrasenia" required>
+                
+					<div class="recordarme-box">
+						<input type="checkbox" name="recordarme" id="recordarme">
+						<label for="recordarme">Recordarme</label>
+					</div>
+                	<button type="submit">Ingresar</button>
+                </form>
+		</div>
+	</div>
+	</main>
+
+	<!-- footer -->
+	<%- include('./partials/footer') %>
+	<!-- /footer -->
+</body>
+
+</html>

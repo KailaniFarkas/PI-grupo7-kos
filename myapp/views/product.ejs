@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link width="" rel="shortcut icon" href="/images/logo-mercado-libro.png" />
+	<link rel="icon" href="/images/icon.png" class="icon-circular" type="image/png">
+
+	<title> Mercado Libro Argentina</title>
+	<!-- Font Awesome Stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" href="/stylesheets/app.css">
+	<link rel="stylesheet" href="/stylesheets/bootstrap-grid.min.css">
+</head>
+<body>
+	<!-- Header -->
+	
+	<!-- /Header -->
+	<%- include('./partials/header.ejs') %>
+
+	<!-- product detail -->
+	 
+	<div class="container products-wrapper">
+		<div class="d-flex align-items-center">
+			<h2 class="products-title"> <%= libro.titulo %></h2> 
+			<p class="product-detail-description">
+				<a href="/product-add">Editar</a>
+			</p>
+		</div>
+		<div class="product-detail">
+			<div class="row">
+				<article class="col-12 col-lg-8 product-detail-info">
+					<img src="/images/products/<%=libro.titulo%>.png" alt="" class="product-detail-img">
+					<p class="product-detail-description"> 
+						Autor: <%= libro.autor %> <br>
+						Año: <%= libro.annio %> <br>
+						Género: <%= libro.genero %>
+					</p>
+				</article>
+				<div class="col-12 col-lg-4">
+						<section class="comments">
+							<% if (libro.comentarios && libro.comentarios.length > 0) { %>
+							  <% for (let i = 0; i < libro.comentarios.length; i++) { %>
+								<article>
+								  <img src="/images/users/<%= libro.comentarios[i].fotoPerfil %>" alt="" width="35" height="35">
+								  <div class="data">
+									<p class="user">
+									  <strong>
+										<a href="profile.html"><%= libro.comentarios[i].usuario %></a>
+									  </strong><br>
+									  <%= libro.comentarios[i].texto %>
+									</p>
+								  </div>
+								</article>
+							  <% } %>
+							<% } else { %>
+							  <p>No hay comentarios aún.</p>
+							<% } %>
+						  </section>
+						  
+
+					</section>
+					<form class="form" action="" method="POST">
+						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+					</form>
+					<hr>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /product detail -->
+
+	<!-- footer -->
+	<%- include('./partials/footer.ejs') %>
+	<!-- /footer -->
+
+</body>	
+</html>

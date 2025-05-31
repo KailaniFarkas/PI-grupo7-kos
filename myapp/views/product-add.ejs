@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link width="" rel="shortcut icon" href="/images/logo-mercado-libro.png" />
+	<link rel="icon" href="/images/icon.png" class="icon-circular" type="image/png">
+
+	<title> Mercado Libro Argentina</title>
+	<!-- Font Awesome Stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" href="/stylesheets/app.css">
+	<link rel="stylesheet" href="/stylesheets/bootstrap-grid.min.css">
+</head>
+
+<body>
+	<!-- Header -->
+	<%- include('./partials/headerLogueado.ejs') %>
+	<!-- /Header -->
+
+	<!-- Novedades -->
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Agregar productos</h2>
+			</div>
+			<form class="form-box" method="get" action="/product/add">
+				<label for="imagen">Imagen del producto:</label>
+				<input id="imagen" name="imagen" type="file" accept="image/*">
+
+				<label for="nombre">Nombre del producto:</label>
+				<input id="nombre" name="nombre" type="text" required>
+
+				<label for="descripcion">Descripción:</label>
+				<input id="descripcion" name="descripcion" type="text" required>
+
+				<button type="submit">Agregar producto</button>
+			</form>
+		</div>
+	</div>
+
+
+	<!-- footer -->
+	<%- include('./partials/footer.ejs') %>
+	<!-- /footer -->
+</body>
+
+</html>
