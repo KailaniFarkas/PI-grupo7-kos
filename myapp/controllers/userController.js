@@ -32,7 +32,7 @@ const userController = {
 
     register: function(req, res){
         if (req.session.user) return res.redirect('/user/profile');
-        return res.render('register');
+        return res.render('register'); // Muestra la vista
     },
 
     create: function(req, res){
