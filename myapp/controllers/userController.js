@@ -56,6 +56,16 @@ const userController = {
 
     },
 
+    logout: function (req, res) {
+        req.session.destroy(); 
+    
+        if (req.cookies.recordame) {
+            res.clearCookie('recordame');
+        }
+    
+        return res.redirect('/'); 
+    },
+
     
     perfil: function (req, res) {
         // return res.send(db.lista)
