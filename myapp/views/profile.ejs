@@ -27,7 +27,7 @@
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"><%= usuario.nombre %>
+					<h1 class="main-title"><%= usuario.username %>
 						<a href="profile-edit">
 							<i class="fas fa-cog"></i>
 						</a>
@@ -37,8 +37,7 @@
 				<div>
 					<p class="mail"><%= usuario.email %></p>
 					<ul class="">
-
-						<li>8 productos</li>
+						<li><%= cantidad %> productos</li>
 						<li>200 seguidores</li>
 						<li>300 comentarios</li>
 					</ul>
@@ -53,23 +52,21 @@
 				<h2 class="products-title">Productos</h2>
 			</div>
 	<!-- Mis productos -->
-	<% for( let i = 0; i < listado.length; i++ ) { %>   
-        <div class="col-12 col-sm-6 col-lg-3">
-          <section class="product-box">
-            <a href="/product/id/<%= listado[i].id %>"> 
-              <figure class="product-box_image">
-                <img src="/images/products/<%=listado[i].titulo%>.png" >
-              </figure>
-              <article class="product-box_data">
-                <h2><%= listado[i].titulo %></h2>
-                <p><%= listado[i].genero %></p>
-                <p><%= listado[i].autor %></p>
-                <p><%= listado[i].annio %></p>
-              </article>
-            </a>
-          </section>
-        </div>
-      <% } %>
+	<% productos.forEach(function(producto) { %>
+		<div class="col-12 col-sm-6 col-lg-3">
+		  <section class="product-box">
+			<a href="/product/detail/<%= producto.id %>"> 
+			  <figure class="product-box_image">
+				<img src="/images/products/<%= producto.imagen_archivo %>" >
+			  </figure>
+			  <article class="product-box_data">
+				<h2><%= producto.nombre_producto %></h2>
+				<p><%= producto.descripcion %></p>
+			  </article>
+			</a>
+		  </section>
+		</div>
+	<% }) %>
 		</div>
 		</div>
 	</div>
@@ -80,4 +77,4 @@
 	<%- include('./partials/footer.ejs') %>
 	<!-- /footer -->
 </body>	
-</html>
+</html> 

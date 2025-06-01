@@ -29,6 +29,34 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// middleware configuracion de session 
+app.use(session({
+  secret: "myapp",
+  resave: false,
+  saveUninitialized: true
+}));
+
+// middleware de session hacia Vistas
+app.use(function(req, res, next) {
+  // que quiero hacer en cada ida y vuelta 
+  if ( req.session.user != undefined) {
+        res.locals.user = req.session.user;
+  }
+  return next();
+});
+
+// middleware de Cookies hacia Vistas
+app.use(function(req, res, next) {
+  // que quiero hacer en cada ida y vuelta 
+
+  if (req.cookies.user != undefined && req.session.user == undefined) {
+    res.locals.user = req.cookies.user;
+    req.session.user = req.cookies.user;
+  }
+
+  return next();
+  })
+
 app.use('/', indexRouter);
 app.use('/product', productRouter);
 app.use('/user', userRouter);

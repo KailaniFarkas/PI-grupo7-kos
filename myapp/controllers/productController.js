@@ -2,9 +2,6 @@
   const db = require ("../database/models")
   const Producto = db.Producto;
   
- 
-
-
  const productController = {
     index: function(req, res){
         const id = req.params.id;
