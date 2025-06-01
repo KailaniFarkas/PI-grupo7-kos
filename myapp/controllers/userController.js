@@ -14,15 +14,40 @@ const userController = {
         let mail = req.body.usuario
         let pass = req.body.contrasenia
         let remember = req.body.recordarme
-        console.log (mail, pass, remember)
+        
+      
         Usuario.findOne ({where: {email: mail}})  //valido que exista el mail en la db
         .then (function (user){
-            if (pass == user.contrasena){ //comparo la pass ingresada con la de la db 
-        
-            } else {} //si no coinciden tengo que mandar error
-        })
+            if (!user){
+                return res.render("login", {
+                    error: "El mail ingresado no está registrado." //el mail esta mal, mensaje de error.
+                });
+            }
+            if (pass == user.contrasena){ //comparo la pass ingresada con la de la db (solo si el mail esta bien)
+                req.session.usuarioLogueado = { //guardo la pass en session.
+                    id: user.id,
+                    nombre: user.username,
+                    email: user.email,
+                    foto: user.fotoPerfil
+                };
+
+                if (remember) {        
+                    res.cookie('recordame', user.id, { maxAge: 1000 * 60 * 5 }); //si tildo recordarme, tengo que guardar la contra en cookies 
+                }
+                    
+                return res.redirect("/"); //y redirijo a home 
+
+        } else {return res.render("login", { //si la pass no es la misma que la de la db
+                error: "La contraseña es incorrecta."
+            });
+        } 
+    })
 
     },
+
+    //logout: function (req, res) {} // para el logout
+
+
 
     perfil: function (req, res) {
         // return res.send(db.lista)

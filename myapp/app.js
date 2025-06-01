@@ -27,6 +27,14 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(function (req, res, next) { //permite modificar el header en todas las vistas cuando el usuario esta logueado
+  if (req.session.usuarioLogueado != undefined) {
+    res.locals.usuarioLogueado = req.session.usuarioLogueado;
+  }
+  next();
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
