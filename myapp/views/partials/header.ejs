@@ -9,7 +9,7 @@
 			</div>
 
 			<div class="col-7 col-md-6">
-				<form action="/search" method="GET" class="search-form">
+				<form action="search-results.html" method="GET" class="search-form">
 					<input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input">
 					<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
 				</form>
@@ -31,33 +31,32 @@
 			<ul class="left-navbar">
 				<li><a href="/">Todos los productos</a></li>
 				<% if (usuarioLogueado) { %>
-					<li><a href="/product/add">Agregar producto</a></li> <!-- acceso a agregar producto -->
+					<li><a href="/product/add">Agregar producto</a></li> 
 				<% } %>
 			</ul>
 
 			<ul class="right-navbar">
 				<% if (usuarioLogueado) { %>
 					<li>
-						Hola, <%= usuarioLogueado.nombre %> <i class="fas fa-user"></i> <!-- saluda al usuario -->
+						Hola, <%= usuarioLogueado.nombre %> <i class="fas fa-user"></i> 
 					</li>
 					<li>
-						<a href="/user/profile">Mi perfil</a> <!-- acceso a mi perfil -->
+						<a href="/user/profile">Mi perfil</a> 
 					</li>
 					<li>
 						<form action="/user/logout" method="post">
-							<button class="logout" type="submit"> Cerrar sesión <i class="fas fa-sign-in-alt"></i> <!-- acceso a logout -->
+							<button class="logout" type="submit"> Cerrar sesión <i class="fas fa-sign-in-alt"></i> 
 							</button>
 						</form>
 					</li>
 				<% } else { %>
 					<li>
-						<a href="/user/register">Creá tu cuenta <i class="far fa-address-card"></i></a> <!-- link de register desaparece -->
-					</li>
+						<a href="/user/register">Creá tu cuenta <i class="far fa-address-card"></i></a> 
 					<li>
-						<a href="/user/login">Ingresá <i class="fas fa-sign-in-alt"></i></a> <!-- link de login desaparece -->
+						<a href="/user/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
 					</li>
 				<% } %>
 			</ul>
 		</nav>
 	</div>
-</header>
+ </header>

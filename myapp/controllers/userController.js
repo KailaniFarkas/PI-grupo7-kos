@@ -34,9 +34,9 @@ const userController = {
            }
 
 
-           //(bcrypt.compareSync (pass, user.contrasena)
+           
            if (bcrypt.compareSync(pass, user.contrasena)) {
-            //comparo la pass ingresada con la de la db (solo si el mail esta bien)
+            
                req.session.usuarioLogueado = { //guardo la pass en session.
                    id: user.id,
                    nombre: user.username,
@@ -59,10 +59,7 @@ const userController = {
            });
        }
    })
-
-
    },
-
 
    logout: function (req, res) {
        req.session.destroy();
@@ -74,14 +71,11 @@ const userController = {
        return res.redirect('/');
    },
 
-
-  
    perfil: function (req, res) {
        // return res.send(db.lista)
            return res.render("profile", {listado: db.lista,usuario: db.usuario, nombre:db.usuario, ft:db.usuario.fotoPerfil, mail:db.usuario.email });
        //mismo for de index con 3 productos
    },
-
 
    register: function(req, res){
        if (req.session.user) return res.redirect('/user/profile');
@@ -90,7 +84,6 @@ const userController = {
        }
        ); // Muestra la vista
     },
-
 
    create: function(req, res) {
     let form = req.body;
@@ -195,8 +188,5 @@ const userController = {
        });
    }
 };
-
-
-
 
 module.exports = userController;
