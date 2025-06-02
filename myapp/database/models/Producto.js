@@ -17,6 +17,10 @@ module.exports = function (sequelize, dataTypes ) {
         descripcion: {
             type: dataTypes.TEXT,
         },
+        usuario_id: {
+            type: dataTypes.INTEGER,
+        },
+        
         createdAt: {
             type: dataTypes.DATE,
         },
@@ -25,9 +29,6 @@ module.exports = function (sequelize, dataTypes ) {
         },
         deletedAt: {
             type: dataTypes.DATE,
-        },
-        usuario_id: {
-            type: dataTypes.INTEGER,
         }
     };
 

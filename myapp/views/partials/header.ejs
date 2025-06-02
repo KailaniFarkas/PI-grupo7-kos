@@ -41,7 +41,7 @@
 						Hola, <%= usuarioLogueado.nombre %> <i class="fas fa-user"></i> 
 					</li>
 					<li>
-						<a href="/user/profile">Mi perfil</a> 
+						<a href="/user/profile/<%=usuarioLogueado.id%>">Mi perfil</a> 
 					</li>
 					<li>
 						<form action="/user/logout" method="post">

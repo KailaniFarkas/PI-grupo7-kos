@@ -159,12 +159,12 @@ const userController = {
    },
    perfil: function(req, res) {
        // Verificamos que el usuario esté logueado
-       if (!req.session.user) {
+       if (!req.session.usuarioLogueado) {
            return res.redirect('/user/login');
        }
-  
+
        // Traigo al usuario junto con sus productos
-       db.Usuario.findByPk(req.session.user.id, {
+       db.Usuario.findByPk(req.session.usuarioLogueado.id, {
            include: [
                {
                    association: 'productos' // Usamos el alias que pusiste en el modelo
