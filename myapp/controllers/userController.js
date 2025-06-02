@@ -34,9 +34,9 @@ const userController = {
            }
 
 
-           //(bcrypt.compareSync (pass, user.contrasena)
+           
            if (bcrypt.compareSync(pass, user.contrasena)) {
-            //comparo la pass ingresada con la de la db (solo si el mail esta bien)
+            
                req.session.usuarioLogueado = { //guardo la pass en session.
                    id: user.id,
                    nombre: user.username,
@@ -63,7 +63,6 @@ const userController = {
    
    },
 
-
    logout: function (req, res) {
        req.session.destroy();
   
@@ -81,7 +80,6 @@ const userController = {
        }
        ); // Muestra la vista
     },
-
 
    create: function(req, res) {
     let form = req.body;
@@ -186,8 +184,5 @@ const userController = {
        });
    }
 };
-
-
-
 
 module.exports = userController;

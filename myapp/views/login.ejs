@@ -24,12 +24,13 @@
 	<!-- Novedades -->
 	<main class="content">
 	<div class="container products-wrapper">
-		<% if (error) { %>
-			<h1><%= error %></h1> 
-		<% } %>
+		
 		<div class="row">
 			<div class="col-12">
 				<h2 class="products-title">Ingresar</h2>
+				<% if (error) { %>
+					<p class="mensaje-error"><%= error %></p>
+				<% } %>
 			</div>
 			<!-- Show the "ultimos" products -->
                 <form class="form-box"  action="./loginProcess" method="post">
