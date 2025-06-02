@@ -4,7 +4,7 @@ const userController = require('../controllers/userController');
 
 router.get('/login', userController.login);
 router.get('/register', userController.register);
-router.get('/profile/:id?', userController.perfil);
+router.get('/profile', userController.perfil);
 
 router.post('/loginProcess', userController.loginProcess);
 router.post('/logout', userController.logout); //para el logout

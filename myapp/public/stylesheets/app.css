@@ -520,12 +520,14 @@ textarea.form-input {
   }
 
   .left-navbar a,
-  .right-navbar a {
+  .right-navbar a,
+  .right-navbar form {
     border-bottom: none;
   }
 
   .left-navbar a:hover,
-  .right-navbar a:hover {
+  .right-navbar a:hover, 
+  .right-navbar form:hover {
     color: #f8fafc;
   }
 

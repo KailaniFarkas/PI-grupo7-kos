@@ -60,7 +60,7 @@ const userController = {
        }
    })
 
-
+   
    },
 
 
@@ -73,15 +73,6 @@ const userController = {
   
        return res.redirect('/');
    },
-
-
-  
-   perfil: function (req, res) {
-       // return res.send(db.lista)
-           return res.render("profile", {listado: db.lista,usuario: db.usuario, nombre:db.usuario, ft:db.usuario.fotoPerfil, mail:db.usuario.email });
-       //mismo for de index con 3 productos
-   },
-
 
    register: function(req, res){
        if (req.session.user) return res.redirect('/user/profile');
