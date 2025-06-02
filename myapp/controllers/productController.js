@@ -3,24 +3,26 @@
   const Producto = db.Producto;
   
  const productController = {
-    index: function(req, res){
-        const id = req.params.id;
+    index: function(req, res) {
+    const id = req.params.id;
 
-        for(let i = 0; i < db.lista.length; i++) {
-            if(db.lista[i].id == id) {
-                res.render("product", {
-                    libro: db.lista[i]
-                })
-            }
+    db.Producto.findByPk(id, {
+        include: ['comentarios', 'usuario']
+    })
+    .then(function(producto) {
+        if (!producto) {
+            return res.status(404).send("Producto no encontrado");
         }
+        return res.render("product", {
+            producto: producto
+        });
+    })
+    .catch(function(error) {
+        console.log(error);
+        return res.status(500).send("Error al obtener el producto");
+    });
 
-    },
-    busqueda:  function (req, res) {
-        return res.render('search-results');
-    },
-    agregar: function (req, res) {
-        return res.render('product-add',{usuario:db.usuario}) // llamando a la vista
-    }
- };
+}};
+
 
  module.exports = productController;
