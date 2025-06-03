@@ -24,11 +24,8 @@
     })
 },
     busqueda: function(req, res) {
-      console.log('BUSQUEDA FUNCIONANDO');
 
       let palabraBuscada = req.query.search;
-
-     console.log('Palabra buscada:', palabraBuscada);
 
       db.Producto.findAll({
         where: {
@@ -40,14 +37,10 @@
       })
         .then(function(resultadoBusqueda) {
           if (resultadoBusqueda.length > 0) {
-            return res.render('search-results', {
-              libro: resultadoBusqueda,
-              mensaje: null
-            });
+            return res.render('search-results', {libro: resultadoBusqueda, mensaje: null});
+
           } else {
-            return res.render('search-results', {
-              libro: [],
-              mensaje: 'No existen resultados para su búsqueda'
+            return res.render('search-results', {libro: [], mensaje: 'No existen resultados para su búsqueda'
             });
           }
         })
