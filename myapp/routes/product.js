@@ -8,7 +8,10 @@ const productController = require('../controllers/productController');
 router.get('/search', productController.busqueda);
 router.get("/detail/:id", productController.index);
 
+router.get('/add', productController.productAdd);
 
-//router.get('/add', productController.agregar); // product/add
+router.post('/add', productController.agregarProducto);
+
+
 
 module.exports = router;

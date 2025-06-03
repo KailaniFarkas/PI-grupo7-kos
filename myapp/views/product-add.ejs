@@ -26,18 +26,19 @@
 			<div class="col-12">
 				<h2 class="products-title">Agregar productos</h2>
 			</div>
-			<form class="form-box" method="get" action="/product/add">
+			<form class="form-box" method="POST" action="/product/add">
 				<label for="imagen">Imagen del producto:</label>
-				<input id="imagen" name="imagen" type="file" accept="image/*">
-
+				<input id="imagen" name="imagen" type="text" placeholder="nombre-de-la-imagen.png" required>
+			  
 				<label for="nombre">Nombre del producto:</label>
 				<input id="nombre" name="nombre" type="text" required>
-
+			  
 				<label for="descripcion">Descripción:</label>
 				<input id="descripcion" name="descripcion" type="text" required>
-
+			  
 				<button type="submit">Agregar producto</button>
-			</form>
+			  </form>
+			  
 		</div>
 	</div>
 

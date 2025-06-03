@@ -48,7 +48,43 @@
           console.log(error);
           return res.send('Error al buscar productos');
         });
+    },
+
+    // esta funcion es para la vista del formulario
+    productAdd: function (req, res) {
+      if (!req.session.user) {
+        return res.redirect('/user/login');
+      }
+  
+      return res.render('product-add', {
+        nombre: req.session.user.nombre,
+        pfp: req.session.user.foto,
+        mail: req.session.user.email
+      });
+    },
+  
+    // esta función es la que me ayudará a guardar el producto
+    agregarProducto: function (req, res) {
+      if (!req.session.user) {
+        return res.redirect('/user/login');
+      }
+  
+      db.Producto.create({
+        nombre_producto: req.body.nombre,
+        descripcion: req.body.descripcion,
+        imagen: '/images/products/' + req.body.imagen,
+        usuario_id: req.session.user.id
+      })
+      .then(function (productoCreado) {
+        return res.redirect('/product/detail/' + productoCreado.id);
+      })
+      .catch(function (error) {
+        console.log(error);
+        return res.send('Error al crear el producto');
+      });
     }
+    
+    
           
 
 };
