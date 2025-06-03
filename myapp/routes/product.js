@@ -4,7 +4,8 @@ var express = require('express');
 var router = express.Router();
 const productController = require('../controllers/productController');
 
-// router.get('/search', productController.busqueda);
+
+router.get('/search', productController.busqueda);
 router.get("/detail/:id", productController.index);
 
 

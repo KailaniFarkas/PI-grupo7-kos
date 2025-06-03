@@ -24,13 +24,28 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Resultados de búsqueda</h2>
-			</div>
-			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá van los resultados de búsqueda. <br>
-			Eliminen estás líneas y cosntruyan la página de resultados de búsqueda. <br>
-			////////////////
-			</h2>
+				<% if (libro && libro.length > 0) { %>
+					<% for (let i = 0; i < libro.length; i++) { %>
+					  <div class="col-sm-6 col-lg-3">
+						<div class="producto">
+						  <h4>
+							<a href="/product/detail/<%= libro[i].id %>">
+							  <%= libro[i].nombre_producto %>
+							</a>
+						  </h4>
+						  <p>Subido por:
+							<a href="/user/profile/<%= libro[i].usuario.id %>">
+							  <%= libro[i].usuario.username %>
+							</a>
+						  </p>
+						</div>
+					  </div>
+					<% } %>
+				  <% } else { %>
+				  <p><%= mensaje %></p>
+				<% } %>
+			  </div>
+			  
 		</div>
 	</div>
 
